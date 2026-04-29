@@ -90,7 +90,7 @@ SL_PCT          = float(os.environ.get("SL_PCT", "4.0"))
 # ── Binance ───────────────────────────────────────────────────────────────────
 QUOTE_ASSET  = "USDT"
 BINANCE_REST = "https://fapi.binance.com"
-BINANCE_WS   = "wss://fstream.binance.com"
+BINANCE_WS   = "wss://fstream.binance.com/market"
 INTERVAL     = "1m"
 
 # ── Ciclo del bot ─────────────────────────────────────────────────────────────
