@@ -801,7 +801,7 @@ async def ws_price_loop(session: aiohttp.ClientSession) -> None:
             async with session.ws_connect(
                 url,
                 heartbeat=20,
-                timeout=aiohttp.ClientTimeout(total=30),
+                timeout=aiohttp.ClientTimeout(connect=10, sock_read=60),
             ) as ws:
                 last_symbols    = symbols
                 reconnect_delay = 3.0
