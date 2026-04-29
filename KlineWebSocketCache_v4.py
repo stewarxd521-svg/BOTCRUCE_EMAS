@@ -114,7 +114,7 @@ class KlineWebSocketCache:
     REST solo en     : backfill inicial · gap post-desconexión · safety 10 min.
     """
 
-    BASE_WS_URL   = "wss://fstream.binance.com/stream"
+    BASE_WS_URL = "wss://fstream.binance.com/market/stream"
     BASE_REST_URL = "https://fapi.binance.com"
 
     # ms de gracia tras close_time para marcar una vela como cerrada.
