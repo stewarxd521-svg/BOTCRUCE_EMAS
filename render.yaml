@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: ema-alert-bot
+    runtime: python
+    pythonVersion: "3.11.9"
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    plan: free
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: EMA_FAST
+        value: "8"
+      - key: EMA_MID
+        value: "21"
+      - key: EMA_SLOW
+        value: "55"
+ 
